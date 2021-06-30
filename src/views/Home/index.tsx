@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Button, DatePicker } from "antd";
+import * as moment from "moment";
 
 interface IHomeState {
-  date: String;
+  date: string;
 }
 
-function Home() {
+type moment = moment.Moment;
+
+const Home: React.FC = () => {
   const [state, setDate] = useState<IHomeState>({
     date: "",
   });
@@ -14,7 +17,7 @@ function Home() {
     console.log(state.date);
   };
 
-  const updateDate = (date, dateString): void => {
+  const updateDate = (date: moment | null, dateString: string): void => {
     setDate({
       date: dateString,
     });
@@ -30,6 +33,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

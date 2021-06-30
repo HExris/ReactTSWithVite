@@ -1,25 +1,24 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "@/views/Home";
-import "antd/dist/antd.css";
-import "./App.css";
+import React, { useState } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import 'antd/dist/antd.css'
+import './App.css'
+
+// Ant Design
+import { Layout } from 'antd'
+const { Header, Footer, Sider, Content } = Layout
+// Components
+import RouterView from '@/router'
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/about">{/* <About /> */}</Route>
-          <Route path="/users">{/* <Users /> */}</Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-};
+    <Layout>
+      <Header>Header</Header>
+      <Content>
+        <RouterView />
+      </Content>
+      <Footer></Footer>
+    </Layout>
+  )
+}
 
-export default App;
+export default App
