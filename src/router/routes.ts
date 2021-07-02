@@ -1,6 +1,7 @@
 import loadable from '@loadable/component'
 import { RouteConfig } from 'react-router-config'
 import { Redirect } from 'react-router-dom'
+import React from 'react'
 
 interface routerMeta {
   level: Number
@@ -12,7 +13,6 @@ interface routerMeta {
 interface routeItem extends RouteConfig {
   path: string
   name: string
-  extra: Boolean
   meta: routerMeta
 }
 
@@ -20,7 +20,7 @@ const routes: routeItem[] = [
   {
     path: '/',
     name: 'Home',
-    extra: true,
+    exact: true,
     meta: {
       level: 1,
       breadcrumbs: ['商品列表'],
@@ -32,11 +32,20 @@ const routes: routeItem[] = [
   {
     path: '/404',
     name: 'NotFound',
-    extra: true,
+    exact: true,
     meta: {
       level: 1
     },
     component: loadable(() => import('@/views/NotFound'))
+  },
+  {
+    path: '*',
+    name: 'RediretNoFound',
+    exact: true,
+    meta: {
+      level: 1
+    },
+    component: loadable(() => import('@/views/Rediret'))
   }
   // {
   //   path: '/product/:id/:appKey?/:type?',

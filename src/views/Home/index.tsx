@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
-import { Button, DatePicker } from 'antd'
+import { Button, DatePicker, Carousel } from 'antd'
 import * as moment from 'moment'
+
+// Components
+import Banner from '@/components/Banner'
 
 interface IHomeState {
   date: string
@@ -25,12 +28,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="home">
-      <div className="App">
-        <DatePicker onChange={updateDate} />
-        <Button type="primary" style={{ marginLeft: 8 }} onClick={printDate}>
-          Primary Button
-        </Button>
-      </div>
+      <Banner />
     </div>
   )
 }

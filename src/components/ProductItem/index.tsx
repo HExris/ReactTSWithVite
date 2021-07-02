@@ -14,6 +14,9 @@ interface ProductItem {
   skuCount: number
 }
 
-const createProductItem = (props: ProductItem): React.ElementType => {
+const CreateProductItem: React.FC = () => {
   return <div className="product-item"></div>
 }
+
+export default CreateProductItem
+export type { ProductItem }
