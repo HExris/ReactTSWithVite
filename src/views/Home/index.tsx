@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import { Button, DatePicker } from "antd";
-import * as moment from "moment";
+import React, { useState } from 'react'
+import { Button, DatePicker } from 'antd'
+import * as moment from 'moment'
 
 interface IHomeState {
-  date: string;
+  date: string
 }
 
-type moment = moment.Moment;
+type moment = moment.Moment
 
 const Home: React.FC = () => {
   const [state, setDate] = useState<IHomeState>({
-    date: "",
-  });
+    date: ''
+  })
 
   const printDate = (): void => {
-    console.log(state.date);
-  };
+    console.log(state.date)
+  }
 
   const updateDate = (date: moment | null, dateString: string): void => {
     setDate({
-      date: dateString,
-    });
-  };
+      date: dateString
+    })
+  }
 
   return (
     <div className="home">
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

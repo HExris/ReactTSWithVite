@@ -1,5 +1,5 @@
-interface PagePath{
-    [path: string]: string
+interface PagePath {
+  [path: string]: string
 }
 
 const routesPath: PagePath = {
