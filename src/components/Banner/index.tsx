@@ -6,13 +6,8 @@ import '@/assets/antd.hack.less'
 
 const Banner = () => {
   return (
-    <Carousel arrows={true}>
-      <div>
-        <h3 className={style.contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 className={style.contentStyle}>2</h3>
-      </div>
+    <Carousel arrows={true} className={style.banner}>
+      <img className={style.bannerImg} src="https://nt2api.superbed.cn/static/images/2021/07/05/60e2ae285132923bf8c3bc3f.jpg"/>
     </Carousel>
   )
 }

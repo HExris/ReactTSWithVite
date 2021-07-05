@@ -1,22 +1,20 @@
 import loadable from '@loadable/component'
 import { RouteConfig } from 'react-router-config'
-import { Redirect } from 'react-router-dom'
-import React from 'react'
 
-interface routerMeta {
-  level: Number
+interface RouterMeta {
+  level?: Number
   breadcrumbs?: string[]
   headerBtns?: string[]
   keepAlive?: true
 }
 
-interface routeItem extends RouteConfig {
+interface RouteItem extends RouteConfig {
   path: string
   name: string
-  meta: routerMeta
+  meta: RouterMeta
 }
 
-const routes: routeItem[] = [
+const routes: RouteItem[] = [
   {
     path: '/',
     name: 'Home',
@@ -102,4 +100,4 @@ const routes: routeItem[] = [
 export default routes
 export { routes }
 
-export type { routeItem }
+export type { RouteItem, RouterMeta }

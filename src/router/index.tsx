@@ -1,6 +1,6 @@
 import React from 'react'
 // React Router
-import { BrowserRouter as DOMRouter, useLocation } from 'react-router-dom'
+import { BrowserRouter as DOMRouter } from 'react-router-dom'
 
 // Router View
 import View from '@/router/view'

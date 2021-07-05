@@ -1,29 +1,29 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add less-load -S
+  C:\Program Files\nodejs\node.exe C:\Users\v_hphua\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add viteCompression -D
 
 PATH: 
-  /Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/mongodb/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/mongodb/bin:/Library/flutter/bin:/Library/flutter/bin
+  C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jdk1.8.0_162\jre\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\TortoiseSVN\bin;C:\Go\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\flutter\bin;C:\Users\v_hphua\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\v_hphua\AppData\Local\Programs\Python\Python37\;C:\Users\v_hphua\AppData\Local\Microsoft\WindowsApps;C:\Users\v_hphua\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\v_hphua\go\bin;C:\Users\v_hphua\AppData\Roaming\npm;C:\PhantomJs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\JetBrains\PyCharm 2020.1\bin;C:\Users\v_hphua\AppData\Local\atom\bin;C:\Users\v_hphua\AppData\Local\Programs\Microsoft VS Code Insiders\bin;D:\Program Files\JetBrains\DataGrip 2021.1.1\bin
 
 Yarn version: 
-  1.22.10
+  1.22.4
 
 Node version: 
-  12.19.0
+  12.18.4
 
 Platform: 
-  darwin x64
+  win32 x64
 
 Trace: 
-  Error: http://r.tnpm.oa.com/less-load: no such package available
-      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
-      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
-      at Request.emit (events.js:314:20)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
-      at Request.emit (events.js:314:20)
-      at Gunzip.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
-      at Object.onceWrapper (events.js:420:28)
-      at Gunzip.emit (events.js:326:22)
-      at endReadableNT (_stream_readable.js:1223:12)
+  Error: http://r.tnpm.oa.com/viteCompression: no such package available
+      at Request.params.callback [as _callback] (C:\Users\v_hphua\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66987:18)
+      at Request.self.callback (C:\Users\v_hphua\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Users\v_hphua\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at Gunzip.<anonymous> (C:\Users\v_hphua\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at Gunzip.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1220:12)
       at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
 npm manifest: 

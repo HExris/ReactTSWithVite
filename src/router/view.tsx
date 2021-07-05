@@ -4,15 +4,17 @@ import { renderRoutes } from 'react-router-config' // 大坑勿用
 import Routes from './routes'
 // Components
 import { Route, Switch } from 'react-router-dom'
+import type { RouteProps } from 'react-router-dom'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
 import RouteWrapper from './wrapper'
 import Redirect from '@/views/Redirect'
-interface LayoutProps {
+
+interface LocationProps extends RouteProps {
   pathname: string
 }
 
-const Layout = ({ pathname }: LayoutProps) => {
+const Layout = ({ pathname }: LocationProps) => {
   return (
     <>
       <PageHeader pathname={pathname} />

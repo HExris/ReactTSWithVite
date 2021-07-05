@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 const { resolve } = require('path')
 import reactRefresh from '@vitejs/plugin-react-refresh'
+import compression from 'vite-plugin-compression'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [reactRefresh()],
+  plugins: [reactRefresh(), compression()],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -20,8 +21,10 @@ export default defineConfig({
     },
     modules: {
       // 样式小驼峰转化,
-      //css: goods-list => tsx: goodsList
       localsConvention: 'camelCase'
     }
+  },
+  build: {
+    brotliSize: true
   }
 })
