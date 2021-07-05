@@ -1,12 +1,16 @@
 import React from 'react'
-import { BrowserRouter as DOMRouter } from 'react-router-dom'
-import Routes from './routes'
-import { renderRoutes } from 'react-router-config'
+// React Router
+import { BrowserRouter as DOMRouter, useLocation } from 'react-router-dom'
+
+// Router View
+import View from '@/router/view'
 
 const RouterView = () => {
   return (
     <React.StrictMode>
-      <DOMRouter>{renderRoutes(Routes)}</DOMRouter>
+      <DOMRouter>
+        <View pathname={location.pathname} />
+      </DOMRouter>
     </React.StrictMode>
   )
 }

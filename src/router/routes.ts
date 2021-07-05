@@ -37,15 +37,6 @@ const routes: routeItem[] = [
       level: 1
     },
     component: loadable(() => import('@/views/NotFound'))
-  },
-  {
-    path: '*',
-    name: 'RediretNoFound',
-    exact: true,
-    meta: {
-      level: 1
-    },
-    component: loadable(() => import('@/views/Rediret'))
   }
   // {
   //   path: '/product/:id/:appKey?/:type?',
