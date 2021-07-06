@@ -1,0 +1,11 @@
+<svg id="注意" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="注意20px">
+    <rect id="矩形" width="24" height="24" fill="#d8d8d8" opacity="0"/>
+    <g id="椭圆形" fill="none" stroke="#ffa942" stroke-miterlimit="10" stroke-width="2">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="11" fill="none"/>
+    </g>
+    <rect id="矩形-2" data-name="矩形" width="2.4" height="9.6" transform="translate(10.8 4.8)" fill="#ffa942"/>
+    <rect id="矩形-3" data-name="矩形" width="2.4" height="2.4" transform="translate(10.8 16.8)" fill="#ffa942"/>
+  </g>
+</svg>

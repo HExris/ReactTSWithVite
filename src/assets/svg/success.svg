@@ -1,0 +1,19 @@
+<svg id="success" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0ad0b6;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Composite_Path_拷贝_12" data-name="Composite Path 拷贝 12" class="cls-1" d="M19.236,6.171A10,10,0,0,0,.785,6.1,10,10,0,0,0,19.21,13.889,10.013,10.013,0,0,0,19.236,6.171ZM8.917,14.005L5,10.352,6.494,8.959l2.423,2.26L14.51,6,16,7.4Z"/>
+  <path id="Composite_Path_拷贝_13" data-name="Composite Path 拷贝 13" class="cls-2" d="M8.917,14.005L5,10.352,6.494,8.959l2.423,2.26L14.51,6,16,7.4Z"/>
+</svg>

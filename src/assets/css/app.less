@@ -1,0 +1,439 @@
+body {
+  min-width                  : 1200px;
+  -webkit-tap-highlight-color: transparent;
+  /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+  font-size                  : 14px;
+  color                      : #333;
+  overflow                   : hidden;
+}
+
+*, pre {
+  font-family: -apple-system,
+    'SF UI Text',
+    'Helvetica Neue',
+    Arial,
+    'PingFang SC',
+    'MircoSoft Yahei';
+}
+
+.sdc-content .page-content .sdc-router-view {
+  padding: 0;
+}
+
+.page-content {
+  &>div {
+    height: 100%;
+  }
+}
+
+.page-container {
+  display       : flex;
+  flex-direction: column;
+  flex          : 1;
+  height        : ~'calc(100vh - 60px)';
+  overflow      : scroll;
+  background    : #f0f4f9;
+}
+
+.el-backtop {
+  display: none;
+}
+
+.discount {
+  background : #fdf6ec;
+  height     : 24px;
+  width      : 100%;
+  display    : flex;
+  align-items: center;
+
+  .discount-label {
+    width       : 81px;
+    height      : 24px;
+    line-height : 24px;
+    padding-left: 10px;
+    font-size   : 14px;
+    color       : white;
+    background  : url(~@/assets/svg/discount.svg);
+  }
+
+  .discount-text {
+    font-size    : 14px;
+    width        : calc(100% - 98px);
+    color        : #ff7548;
+    margin-left  : 10px;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+  }
+}
+
+// button
+.el-button.el-button--primary {
+  border: 1px #2f5ac9 solid !important;
+}
+.el-button.el-button--primary.disabled {
+  cursor          : not-allowed;
+  color           : #999999 !important;
+  border-color    : #f2f2f2 !important;
+  background-color: #f2f2f2 !important;
+}
+
+.el-button.el-button--primary:hover {
+  border: 1px #3464E0 solid !important;
+}
+.el-button.el-button--primary.disabled:hover {
+  border: 1px #DCDCDC solid !important;
+}
+
+
+/* Element-UI Hack CSS */
+
+// Form
+// 反转 * 号
+.el-form-item.is-required{
+  .el-form-item__label::before{
+    content:'' !important;
+    margin-right: 0!important;
+  }
+  .el-form-item__label::after {
+      content: '*';
+      color  : #F81D22;
+      margin-left: 4px;
+  }
+}
+
+// Button
+.el-button {
+
+  &.el-button--primary {
+    background-color: #3464E0;
+    border          : none;
+
+    &:focus {
+      background-color: #3464E0;
+    }
+
+    &:hover {
+      background-color: #2f5ac9;
+    }
+
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      background-color: #f2f2f2;
+      color           : #acacac;
+    }
+  }
+
+  &.el-button--default {
+    background-color: #fff;
+    border          : 1px solid #dcdcdc;
+    color           : #666666;
+
+    &:focus {
+      background-color: #fff;
+      border          : 1px solid #dcdcdc;
+      color           : #666666;
+    }
+
+    &:hover {
+      background-color: #f5f7f9;
+      border          : 1px solid #3464E0;
+      color           : #3464E0;
+    }
+
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      background-color: #ffffff;
+      border          : 1px solid #dcdcdc;
+      color           : #acacac;
+    }
+  }
+
+  &.el-button--blue-button {
+    background-color: #fff;
+    border          : 1px solid #3464E0;
+    color           : #3464E0;
+
+    &:focus {
+      background-color: #fff;
+      border          : 1px solid #3464E0;
+      color           : #3464E0;
+    }
+
+    &:hover {
+      background-color: #f5f7f9;
+      border          : 1px solid #3464E0;
+      color           : #3464E0;
+    }
+
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      background-color: #ffffff;
+      border          : 1px solid #dcdcdc;
+      color           : #acacac;
+    }
+  }
+
+  &.el-button--filter-button {
+    background-color: #fff;
+    border          : 1px solid #dcdcdc;
+    color           : #666666;
+
+    &:focus,
+    &:hover {
+      background-color: #fff;
+      border          : 1px solid #dcdcdc;
+      color           : #666666;
+    }
+  }
+
+  &.el-button--text {
+    color      : #3464E0;
+    padding    : 12px 0;
+    font-weight: normal;
+
+    &:focus {
+      color: #3464E0;
+    }
+
+    &:hover {
+      color: #2f5ac9;
+    }
+  }
+}
+
+// InputNumber
+.el-input-number {
+  width: 150px;
+}
+
+.el-input-number__decrease,
+.el-input-number__increase {
+  background: white;
+}
+
+.el-input__inner:hover {
+  border-color: #dedede;
+}
+
+// Checkbox
+.el-checkbox {
+  .el-checkbox__inner {
+    width : 16px;
+    height: 16px;
+
+    &:after {
+      left  : 4px;
+      height: 8px;
+    }
+  }
+
+  .el-checkbox__inner::after {
+    border-color: white;
+  }
+
+  .el-checkbox__input.is-checked:not(.is-disabled),
+  .el-checkbox__input.is-indeterminate {
+    &+.el-checkbox__label {
+      color: #3464E0;
+    }
+
+    .el-checkbox__inner {
+      background-color: #3464E0;
+      border-color    : #3464E0;
+    }
+  }
+}
+
+// Table
+div.el-table {
+  &::before {
+    height: 0px;
+  }
+
+  .table-header {
+    height    : 40px;
+    background: #f5f7f9;
+    color     : #333;
+
+    th {
+      border: none;
+    }
+  }
+
+  .table-row {
+    height    : 60px;
+    background: #ffffff;
+    font-size : 16px;
+    color     : #545454;
+  }
+
+  th,
+  tr {
+    box-sizing: border-box;
+    background: none;
+  }
+
+  td {
+    font-size: 14px;
+    padding  : 8px 0;
+    color    : #666;
+  }
+
+  th .cell,
+  tr .cell {
+    padding-left : 20px;
+    text-overflow: inherit;
+    word-break   : normal;
+    overflow-wrap: break-word;
+  }
+
+  .el-table__fixed-right {
+    background: #fff;
+  }
+
+  .el-table__fixed {
+    background: #fff;
+  }
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before {
+    display: none;
+  }
+
+  .el-table__row:hover>td {
+    background: #fff !important;
+  }
+}
+
+// Pagination
+div.el-pagination {
+  color      : #666;
+  text-align : right;
+  font-weight: normal;
+
+  .el-select {
+    width: auto;
+  }
+
+  .el-pager li:not(.disabled) {
+    border : 1px solid #dcdcdc;
+    padding: 0;
+
+    &:not(:first-of-type) {
+      border-left: none;
+    }
+
+    &:hover {
+      color: #3464E0;
+    }
+
+    &.active {
+      color: #3464E0;
+    }
+  }
+
+  .btn-prev,
+  .btn-next {
+    padding: 0 6px;
+    border : 1px solid #dcdcdc;
+
+    &:not(:disabled):hover {
+      color: #3464e0;
+    }
+  }
+
+  .btn-prev {
+    border-radius: 2px 0 0 2px;
+    border-right : none;
+  }
+
+  .btn-next {
+    border-radius: 0 2px 2px 0;
+    border-left  : none;
+  }
+
+  .el-pager li {
+    font-size: 12px;
+  }
+
+  .el-input input {
+    font-size: 12px;
+    width    : 100%;
+  }
+
+  .el-pagination__jump {
+    margin-left: 0;
+  }
+
+  .el-pagination__sizes {
+    margin: 0 5px;
+
+    .el-input__inner {
+      border-color : #dcdcdc;
+      border-radius: 2px !important;
+    }
+  }
+
+  .el-pagination__editor {
+    margin-left: 5px;
+
+    .el-input__inner {
+      border-color : #dcdcdc;
+      border-radius: 2px;
+    }
+  }
+}
+
+// Message
+.el-message {
+  background-color: #ffffff;
+  box-shadow      : 0px 0px 20px 0px rgba(72, 75, 79, 0.2);
+  border-radius   : 4px;
+  min-width       : 340px !important;
+  border-color    : #ffffff !important;
+  padding         : 0 12px;
+  line-height     : 36px;
+  height          : 36px;
+
+  .el-message__icon {
+    font-size   : 16px;
+    line-height : 36px;
+    margin-top  : 1px;
+    margin-right: 6px;
+  }
+
+  .el-icon-loading {
+    margin-right: 10px;
+  }
+}
+
+// Message: warning
+.el-message.el-message--warning {
+  background-color: #fdf6ec;
+  font-size       : 14px;
+  color           : #ff7548;
+
+  &>p {
+    color: #ff7548 !important;
+  }
+
+  .el-message__icon.el-icon-warning::before {
+    content    : "\e6c9";
+    font-weight: bold;
+  }
+}
+
+// SDC UI HACK
+.sdc-modal {
+  transition: opacity .2s ease;
+}
+
+.sdc-modal.slide-enter,
+.sdc-modal.slide-leave-active {
+  top    : 15% !important;
+  opacity: 0;
+}

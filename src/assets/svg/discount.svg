@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="81" height="24" viewBox="0 0 81 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff7548;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="限时优惠bg" class="cls-1" d="M600.006,665L595,670.006V676H519V652h76v7.994Z" transform="translate(-519 -652)"/>
+</svg>

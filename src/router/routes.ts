@@ -2,7 +2,7 @@ import loadable from '@loadable/component'
 import { RouteConfig } from 'react-router-config'
 
 interface RouterMeta {
-  level?: Number
+  level: Number
   breadcrumbs?: string[]
   headerBtns?: string[]
   keepAlive?: true
