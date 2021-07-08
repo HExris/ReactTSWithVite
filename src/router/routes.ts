@@ -1,4 +1,5 @@
 import loadable from '@loadable/component'
+import Paths from './paths'
 import { RouteConfig } from 'react-router-config'
 
 interface RouterMeta {
@@ -16,7 +17,7 @@ interface RouteItem extends RouteConfig {
 
 const routes: RouteItem[] = [
   {
-    path: '/',
+    path: Paths.Home,
     name: 'Home',
     exact: true,
     meta: {
@@ -28,14 +29,14 @@ const routes: RouteItem[] = [
     component: loadable(() => import('@/views/Home'))
   },
   {
-    path: '/404',
+    path: Paths.NotFound,
     name: 'NotFound',
     exact: true,
     meta: {
       level: 1
     },
     component: loadable(() => import('@/views/NotFound'))
-  }
+  },
   // {
   //   path: '/product/:id/:appKey?/:type?',
   //   name: 'ProductDetail',
@@ -46,16 +47,16 @@ const routes: RouteItem[] = [
   //   },
   //   component: () => import(/* webpackChunkName: "ProductDetail" */ '@/views/Product/ProductDetail')
   // },
-  // {
-  //   path: '/orderManagement',
-  //   name: 'OrderManagement',
-  //   meta: {
-  //     level: 2,
-  //     name: ['订单管理'],
-  //     headerBtns: ['cart']
-  //   },
-  //   component: () => import(/* webpackChunkName: "OrderManagement" */ '@/views/OrderManagement')
-  // },
+  {
+    path: Paths.OrderManagement,
+    name: 'OrderManagement',
+    meta: {
+      level: 2,
+      breadcrumbs: ['订单管理'],
+      headerBtns: ['cart']
+    },
+    component: loadable(() => import('@/views/Order/list'))
+  },
   // {
   //   path: '/orderDetail/:id',
   //   name: 'OrderDetail',
@@ -71,16 +72,16 @@ const routes: RouteItem[] = [
   //   },
   //   component: () => import(/* webpackChunkName: "OrderDetail" */ '@/views/OrderManagement/OrderDetail')
   // },
-  // {
-  //   path: '/shoppingCart',
-  //   name: 'ShoppingCart',
-  //   meta: {
-  //     level: 2,
-  //     name: ['购物车'],
-  //     headerBtns: ['order']
-  //   },
-  //   component: () => import(/* webpackChunkName: "ShoppingCart" */ '@/views/ShoppingCart')
-  // },
+  {
+    path: Paths.Cart,
+    name: 'Cart',
+    meta: {
+      level: 2,
+      breadcrumbs: ['购物车'],
+      headerBtns: ['order']
+    },
+    component: loadable(() => import('@/views/Cart'))
+  }
   // {
   //   path: '/noRight',
   //   name: 'NoRight',

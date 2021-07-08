@@ -10,14 +10,14 @@ import PageFooter from '@/components/PageFooter'
 import RouteWrapper from './wrapper'
 import Redirect from '@/views/Redirect'
 
-interface LocationProps extends RouteProps {
-  pathname: string
-}
+// interface LocationProps extends RouteProps {
+//   pathname: string
+// }
 
-const Layout = ({ pathname }: LocationProps) => {
+const Layout = () => {
   return (
     <>
-      <PageHeader pathname={pathname} />
+      <PageHeader />
       <Switch>
         {Routes.map((route) => (
           <Route

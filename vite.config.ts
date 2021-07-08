@@ -5,6 +5,15 @@ import compression from 'vite-plugin-compression'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 8008,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9999',
+        changeOrigin: true
+      }
+    }
+  },
   plugins: [reactRefresh(), compression()],
   resolve: {
     alias: {

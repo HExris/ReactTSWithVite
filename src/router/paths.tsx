@@ -8,6 +8,7 @@ const routesPath: PagePath = {
   OrderManagement: '/order',
   OrderDetail: '/order/:id',
   Cart: '/cart',
+  NotFound: '/404',
   NoAllow: '/notAllow'
 }
 

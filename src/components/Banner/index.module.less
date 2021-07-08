@@ -1,15 +1,44 @@
 .banner {
+  position: relative;
   background-color: #f1f4f9;
-  
-  /deep/ .el-carousel__item{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  &:hover .prev {
+    left: 15px;
+  }
+  &:hover .next {
+    right: 15px;
+  }
+  &:hover .prev,
+  &:hover .next {
+    opacity: 1 !important;
   }
 
   .banner-img {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .btn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .prev {
+    .btn;
+    left: 0;
+  }
+  .next {
+    .btn;
+    right: 0;
   }
 }

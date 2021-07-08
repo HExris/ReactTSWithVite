@@ -18,6 +18,23 @@
   .transition-btn {
     display: flex;
     align-items: center;
+    & > * {
+      display: block;
+    }
+    & > *:not(:last-child) {
+      margin-right: 40px;
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translate3d(0, -50%, 0);
+        content: '';
+        height: 20px;
+        width: 1px;
+        background-color: #dcdcdc;
+      }
+    }
   }
 
   .header-button {
@@ -38,21 +55,6 @@
   .split {
     color: #dcdcdc;
     padding: 0 20px;
-  }
-
-  .transition-btn > div:not(:last-child) {
-    margin-right: 40px;
-    position: relative;
-    &:before {
-      position: absolute;
-      top: 50%;
-      right: -20px;
-      transform: translate3d(0, -50%, 0);
-      content: '';
-      height: 20px;
-      width: 1px;
-      background-color: #dcdcdc;
-    }
   }
 
   .header-item {
